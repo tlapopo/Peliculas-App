@@ -17,6 +17,6 @@ self.addEventListener('fetch', event =>{
 });
 
 //NETWORK ONLY
-self.addEventListener('fetch', ()=>{
-    event.respondWith(request);
-});
+self.addEventListener('fetch', function(event) {
+    event.respondWith(fetch(event.request));
+  });
